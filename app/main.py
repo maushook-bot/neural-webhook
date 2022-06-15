@@ -3,7 +3,7 @@ from flask import Flask, request, abort, jsonify
 app = Flask(__name__)
 
 
-@app.route('/webhook', methods=['POST'])
+@app.route('https://neural-webhook.herokuapp.com/', methods=['POST'])
 def webhook():
     headers = request.headers
     bearer = headers.get('Authorization')
